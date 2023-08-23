@@ -8,6 +8,11 @@ Fill your Discord channel with programmer memes.
 
 ## Usage
 
+### Requirements
+
+- Node.js verson 16 or higher
+- A tool to run this as a daemon like `pm2`, `docker`, `screen`, etc.
+
 ### Creating a webhook in Discord
 
 In progress...
