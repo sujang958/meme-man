@@ -24,7 +24,7 @@ const job = new CronJob("* 1 * * *", () => {
 })
 
 job.start()
-logWithDate(new Date(), "Running")
+logWithDate("Running")
 
 process.on("unhandledRejection", logWithDate)
 process.on("uncaughtException", logWithDate)
