@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "cron": "^2.4.1",
+    "dotenv": "^16.3.1",
     "fast-xml-parser": "^4.2.7"
   }
 }

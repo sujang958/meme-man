@@ -1,4 +1,6 @@
 import { XMLParser } from "fast-xml-parser"
+import { logWithDate, sendMeme } from "./utils.js"
+import { CronJob } from "cron"
 
 const parser = new XMLParser()
 
@@ -15,4 +17,14 @@ const images = entries
   .filter((images): images is RegExpMatchArray => (images ? true : false))
   .flat(1)
 
-console.log(images)
+const job = new CronJob("* 1 * * *", () => {
+  images.forEach((url, i) => {
+    setTimeout(sendMeme.bind(null, url), i * 1000)
+  })
+})
+
+job.start()
+logWithDate(new Date(), "Running")
+
+process.on("unhandledRejection", logWithDate)
+process.on("uncaughtException", logWithDate)
