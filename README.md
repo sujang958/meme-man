@@ -15,7 +15,7 @@ Fill your Discord channel with programmer memes.
 
 ### Creating a webhook in Discord
 
-In progress...
+Go a text channel's settings. Integrations > Create Webhook. Click the created webhook and click on the `Copy Webhook URL` button.
 
 ### Setting up the program
 
